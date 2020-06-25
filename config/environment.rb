@@ -16,7 +16,6 @@ ActiveRecord::Base.establish_connection(
   :database => "db/#{ENV['SINATRA_ENV']}.sqlite"
 )
 
-use Rack::MethodOverride
-run ApplicationController
+se Rack::MethodOverride
 
 require_all 'app'
