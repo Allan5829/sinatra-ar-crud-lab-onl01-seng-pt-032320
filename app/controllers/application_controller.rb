@@ -45,7 +45,7 @@ class ApplicationController < Sinatra::Base
   end
 
   delete '/articles/:id' do
-    redirect erb :index
+    erb :index
   end
 
 end
