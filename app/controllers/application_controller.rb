@@ -33,7 +33,7 @@ class ApplicationController < Sinatra::Base
   end
 
   patch '/articles/:id' do
-    @article.save
+    binding.binding.pry
     redirect "/articles/#{@article.id}"
   end
 
