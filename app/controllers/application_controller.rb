@@ -34,7 +34,7 @@ class ApplicationController < Sinatra::Base
 
   patch '/articles/:id' do
     article = @article
-    article.save
+    article.update
 
     redirect "/articles/#{@article.id}"
   end
