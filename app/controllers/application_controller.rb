@@ -33,8 +33,12 @@ class ApplicationController < Sinatra::Base
   end
 
   patch '/articles/:id' do
-    article = Article.create(params)
-    @article.update(article)
+    id = params["id"]
+    new_params = {}
+    old_post = Article.find(id)
+    new_params[:title] = params["title"]
+    new_params[:content] = params["content"]
+    old_post.update(new_params)
 
     redirect "/articles/#{@article.id}"
   end
